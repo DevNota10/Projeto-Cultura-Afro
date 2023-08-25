@@ -9,21 +9,25 @@
 <body>
     <header>
         <div class="container">
-            <div class="logo background-image"  style="background-image: url(./img/black-power-raised-fist-symbol-2198931.jpg);"></div>
+            <div class="logo bg-img"  style="background-image: url(./img/black-power-raised-fist-symbol-2198931.jpg);"></div>
 
-            <nav>
-                <ul>
+            <nav id="nav">
+                <button id="btn-mobile">Menu</button>
+
+                <ul id="menu">
                     <li><a href="#inicio">Início</a></li>
-                    <li><a href="#historia">História</a></li>
-                    <li><a href="cultura">Cultura</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cultura">Cultura</a></li>
                     <li><a href="hoje">Hoje</a></li>
                 </ul>
             </nav>
-
         </div><!--container-->
+      
     </header>
-        <section class=" main">
-            <div class="container" style="background-image: url(../img/Background-img.jpg);" >
+    <div class="container-father">
+
+        <section class=" main" id="inicio">
+            <div class="container bg-img" style="background-image: url(./img/Background-img.jpg);" >
                 <div class="text-01-main">
                     <p>
                         A cultura afro-brasileira é o conjunto de manifestações culturais predominantes no Brasil, formada a partir da junção de elementos da cultura dos povos africanos que foram trazidos como escravos para o país durante o período colonial
@@ -37,53 +41,96 @@
 
             </div><!--container-->
 
-            <aside class="item-1">
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Cultura Afro</a></li>
-                        <li><a href="#">Religião</a></li>
-                        <li><a href="#">Política</a></li>
-                        <li><a href="#">Brasil Miscigenado </a></li>
-                        <li><a href="#">Musicas</a></li>
-                    </ul>
-                </nav>
-            </aside>
         </section>
+
+            <div class="box-sidebar-sticky">
+                <div class="sidebar">
+                    <div class="arrow-sidebar">
+                        <i class="fa-solid  arrow-right fa-circle-right"></i>
+                        <!-- <i class="fa-solid arrow-left fa-circle-left"></i> -->
+                    </div>
+                 
+                   <nav>
+                       <ul>
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#">Sobre</a></li>
+                           <li><a href="#">Cultura Afro</a></li>
+                           <li><a href="#">Religião</a></li>
+                           <li><a href="#">Política</a></li>
+                           <li><a href="#">Brasil Miscigenado </a></li>
+                           <li><a href="#">Musicas</a></li>
+                       </ul>
+                   </nav>
+               </div><!--sidebar-->
+    
+            </div><!--box-sidebar-sticky-->
 
         <section class="sobre" id="sobre">
             <div class="container ">
                 <h2>Que Somos</h2>
                 <div class="bx-texto-sobre">
+                    <div>
+                        <p>
+                            Este site tem como tema a cultura e a vida de pessoas afrodescendentes busca trazer informações e promover a valorização e a compreensão da importância desta comunidade na construção da sociedade brasileira e mundial. Com um conteúdo diversificado e abrangente, o nosso objetivo é desmistificar estereótipos e combater o racismo, explorando a riqueza cultural afrodescendente, sua história, contribuições e lutas. Por meio de artigos, reportagens, textos informativos e entrevistas, nosso objetivo é sensibilizar e educar o público sobre a diversidade étnico-cultural presente na sociedade.
+    
+                        </p>
+                     
+                        <p>
+                            O conteúdo desta página abrange diversos aspectos da cultura afrodescendente, como música, dança, arte, literatura, religião, moda, gastronomia e esportes. Além disso, também discute questões sociais relevantes para a comunidade, como debates sobre representatividade, desigualdade racial, direitos humanos, igualdade de oportunidades, entre outros temas.
+                        </p>
+                        <p>
+                            Através de uma abordagem inclusiva e respeitosa, o site busca dar voz a artistas, intelectuais, ativistas e membros da comunidade afrodescendente, proporcionando um espaço para o compartilhamento de suas experiências, perspectivas e realizações.
+    
+                        </p>
+                    </div>  
+                    <div>
+                            <p>
+                                Além do conteúdo informativo, o site também disponibiliza uma seção de eventos relacionados à cultura afrodescendente, como exposições, shows, palestras, workshops e festivais, a fim de incentivar o público a participar e prestigiar essas iniciativas.
+    
+                            </p>
+                            
+                            <p>
+                                Em resumo, o site que aborda a cultura e a vida de pessoas afrodescendentes busca conscientizar, valorizar e celebrar a diversidade étnico-cultural presente na nossa sociedade, contribuindo para a construção de um mundo mais inclusivo, justo e igualitário. É um espaço de respeito, diálogo e aprendizado, onde todos são convidados a conhecer, apreciar e se engajar na construção de uma sociedade mais justa e plural.
+                            </p>
 
-                    <div class="texto-sobre-parte-1">
-                        <p>Este site tem como tema a cultura e a vida de pessoas afrodescendentes busca trazer informações e promover a valorização e a compreensão da importância desta comunidade na construção da sociedade brasileira e mundial.
-    
-                            Com um conteúdo diversificado e abrangente, o objetivo do site é desmistificar estereótipos e combater o racismo, explorando a riqueza cultural afrodescendente, sua história, contribuições e lutas. Por meio de artigos, reportagens, textos informativos e entrevistas, o site busca sensibilizar e educar o público sobre a diversidade étnico-cultural presente na sociedade.
-                            
-                            O conteúdo do site abrange diversos aspectos da cultura afrodescendente, como música, dança, arte, literatura, religião, moda, gastronomia e esportes. Além disso, o site também discute questões sociais relevantes para a comunidade, como debates sobre representatividade, desigualdade racial, direitos humanos, igualdade de oportunidades, entre outros temas.
-                            
-                          
-                    </div>
-                    <div class="texto-sobre-parte-2">
-                        <p>  Através de uma abordagem inclusiva e respeitosa, o site busca dar voz a artistas, intelectuais, ativistas e membros da comunidade afrodescendente, proporcionando um espaço para o compartilhamento de suas experiências, perspectivas e realizações.
-                            
-                            Além do conteúdo informativo, o site também disponibiliza uma seção de eventos relacionados à cultura afrodescendente, como exposições, shows, palestras, workshops e festivais, a fim de incentivar o público a participar e prestigiar essas iniciativas.
-                            
-                            Em resumo, o site que aborda a cultura e a vida de pessoas afrodescendentes busca conscientizar, valorizar e celebrar a diversidade étnico-cultural presente na nossa sociedade, contribuindo para a construção de um mundo mais inclusivo, justo e igualitário. É um espaço de respeito, diálogo e aprendizado, onde todos são convidados a conhecer, apreciar e se engajar na construção de uma sociedade mais justa e plural.</p>
-    
                     </div>
                   
                 </div><!--bx-texto-sobre-->
-
             </div><!--container-->
+        </section>
+
+
+        <section class="cultura" id="cultura">
+            <div class="container">
+                <h2>Cultura</h2>
+                <div class="container-slider">
+                        <h1>Slider</h1>
+                        <div class="img-box">
+                            <img src="img/img-1.jpg" alt="">
+                            <img src="img/img-2.jpg" alt="">
+                            <img src="img/img-3.jpg" alt="">
+                        </div>
+                        <div class="bullets-box">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                </div>
+
+            </div>
 
         </section>
+    </div><!--container-father-->    
        
 
 
-    
+    <script src="js/script.js"></script>
+    <!-- CDN font-awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
 </body>
 </html>
