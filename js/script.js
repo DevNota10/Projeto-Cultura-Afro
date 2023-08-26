@@ -11,7 +11,7 @@ window.onload = function(){
 
     function scrollToSection(el){
         el.preventDefault()
-        const distanceFromTheTop = getDistanceFromTheTop(el.target) -90;
+        const distanceFromTheTop = getDistanceFromTheTop(el.target) -100;
         smoothScrollTo(0,distanceFromTheTop);
     }
 
@@ -48,12 +48,9 @@ window.onload = function(){
 
     //   Btn Mobile:
     const btnMobile = document.getElementById('btn-mobile');
-
     function toggleMenu(){
         const nav = document.getElementById('nav');
-        nav.classList.toggle("active")
-        console.log(nav)
-        
+        nav.classList.toggle("active")  
        
     }
     btnMobile.addEventListener('click', toggleMenu)
