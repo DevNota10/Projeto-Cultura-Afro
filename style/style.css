@@ -113,15 +113,15 @@ section.main{
 }
 
 section.main .ball{
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     background:linear-gradient(-45deg,#41010c,#000,#fff);
 
     position: absolute;
     bottom:-100px;
     z-index: 99;
     border-radius: 50%;
-    left: -15%;
+    /* left: -5%; */
     border: 2px solid #292929;
 
     transform: translate(0deg);
@@ -129,25 +129,21 @@ section.main .ball{
     animation: animate-ball 1s ease-in-out ;
     text-align: center;
     color: #fff;
-}
-
-section.main .ball:nth-child(2){
-    top: 0;
-    left: 60%;
 
 }
+
+/* Reposicionar this   */
+/* section.main .ball:nth-child(2){
+    top: 50px;
+    left: 50%;
+  
+} */
 section.main .ball h1{
     position: relative;
     color: #fff;
-    font-size: 40px;
+    font-size: 30px;
     text-shadow: 5px 5px 2px #41010c;
 }
-
-/* section.main .ball:hover{
-    left: 30%;
-    transform: translateX(-30%);
-    transition: 1s;
-} */
 
 
 @keyframes animate-ball {
@@ -235,7 +231,7 @@ section.main .text-01-main{
 
 section.sobre{
     position: relative;
-    margin-top:-434px;
+    margin-top:-545px;
 }
 
 section.sobre .bx-texto-sobre{
@@ -250,6 +246,7 @@ section.cultura{
     width: 100%;
     height: 800px;
     background: #bbbb;
+    /* margin-top: 100px; */
 }
 section.cultura .container-slider{
     margin: 0 auto;
@@ -272,7 +269,6 @@ section.cultura .bullets-box{
     gap: 20px;
 }
 
-
 section.cultura .img-box{
     max-width: 100%;
     height: 100%;
@@ -294,10 +290,12 @@ section.cultura span{
 }
 
 @media screen and (max-width:768px) {
-/* Reparar menu mobile  */
     header #btn-mobile{
         padding: .5rem;
         display: block;
+        position: absolute;
+        right: 10px;
+        top: 50px;
     }
 
     header #menu{
@@ -332,7 +330,7 @@ section.cultura span{
     }
 
     section.main .text-01-main{
-    width: 100%;
+    width: 90%;
     background:#57332763 ;
     color: #fff;
     border-radius: 10px;
@@ -341,6 +339,30 @@ section.cultura span{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+    p{ 
+        padding: 20px;
+    }
+
+    section.main .ball{
+        width: 300px;
+        height: 300px;
+        bottom:-0px; 
+        left: -15px;
+    }
+
+    section.main .ball:nth-child(2){
+        visibility: hidden; 
+    }
+    section.main .ball h1{
+        font-size: 25px;
+    }
+
+    section.sobre .bx-texto-sobre{
+        display: block;
+    }
+
+
 
 
 }
