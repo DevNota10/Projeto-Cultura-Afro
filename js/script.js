@@ -66,6 +66,30 @@ window.onload = function(){
        
     })
 
+    // Slider cultura
+    let img = document.querySelectorAll(".img-box img");
+    let curIdx = 0
+     function sliderCultrura (){
+ ;
+      img[0].style.opacity='1';
+      setInterval(()=>{
+        changeSlider()
+      },3000);
+     
+     };
+   
+    sliderCultrura();
+     function changeSlider() {
+      img[curIdx].style.opacity ='0';
+       curIdx++
+       if(curIdx == img.length) curIdx = 0;
+       img[curIdx].style.opacity ='1';
+    }
+    
+
+
+    
+
 }
 
 
