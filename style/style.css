@@ -285,7 +285,7 @@ section.cultura span{
     display: block;
     width: 20px;
     height: 20px;
-    background: #cccc;
+    background: #807d7dcc;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -297,7 +297,8 @@ footer{
 }
 
 footer .container{
-    background-color: #41010c;
+    color: #fff;
+    background-color: #170105;
 }
 @media screen and (max-width:768px) {
     header #btn-mobile{

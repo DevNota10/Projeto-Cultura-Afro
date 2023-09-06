@@ -68,24 +68,43 @@ window.onload = function(){
 
     // Slider cultura
     let img = document.querySelectorAll(".img-box img");
-    let curIdx = 0
+    let curIdx = 0;
+    sliderCultrura();
      function sliderCultrura (){
  ;
       img[0].style.opacity='1';
       setInterval(()=>{
         changeSlider()
-      },3000);
+      },2000);
      
      };
-   
-    sliderCultrura();
+
+    function clickBullets(id){
+      img[curIdx].style.opacity='0';
+      curIdx = id
+      console.log(img[curIdx])
+      img[curIdx].style.opacity='1';
+    }
+
      function changeSlider() {
       img[curIdx].style.opacity ='0';
        curIdx++
        if(curIdx == img.length) curIdx = 0;
        img[curIdx].style.opacity ='1';
     }
-    
+
+
+    const bullets = document.querySelectorAll(".bullets-box span");
+    bullets.forEach((item)=>{
+      item.addEventListener('click',clickBullets);
+      
+    })
+
+
+
+  
+   
+
 
 
     
