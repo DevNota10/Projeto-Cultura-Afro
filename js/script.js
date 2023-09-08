@@ -67,49 +67,75 @@ window.onload = function(){
     })
 
     // Slider cultura
-    let img = document.querySelectorAll(".img-box img");
+    const bulletsBox =  document.querySelector(".bullets-box ");
+    const bullets = document.querySelectorAll(".bullets-box > span");
+    const maxImg = document.querySelectorAll(".img-box img");
     let curIdx = 0;
-    sliderCultrura();
-     function sliderCultrura (){
- ;
-      img[0].style.opacity='1';
+    let delay = 3000;
+
+   
+     function initSlider(bullets){
+      for(let i = 0; i <maxImg.length; i++ ){
+        if(i == 0){
+       
+        let span =  document.createElement('span');
+         bulletsBox.appendChild(span)
+         span.style.background='red';
+
+        }else{
+           span =  document.createElement('span');
+          bulletsBox.appendChild(span);
+        }
+      }
+
+      maxImg[0].style.opacity='1';
       setInterval(()=>{
         changeSlider()
-      },2000);
+      },delay);
      
      };
-
-    function clickBullets(id){
-      img[curIdx].style.opacity='0';
-      curIdx = id
-      console.log(img[curIdx])
-      img[curIdx].style.opacity='1';
-    }
+     initSlider();
 
      function changeSlider() {
-      img[curIdx].style.opacity ='0';
+      maxImg[curIdx].style.opacity ='0';
        curIdx++
-       if(curIdx == img.length) curIdx = 0;
-       img[curIdx].style.opacity ='1';
-    }
+       if(curIdx == maxImg.length)
+        curIdx = 0;
+        bullets.forEach((item,idx)=>{
+          item.style.background = '#807d7dcc'
+        })
+        bullets[curIdx].style.background= 'red'
+       maxImg[curIdx].style.opacity ='1';
+    };
 
+        // Click bullets:
+        bullets.forEach((item,index)=>{
+          item.addEventListener('click',()=>{
+            maxImg[curIdx].style.opacity='0';
+            curIdx = index;
+            // console.log(curIdx);
+            maxImg[curIdx].style.opacity='1';
+            bullets.forEach((item)=>{
+              item.style.background = '#807d7dcc'
+            })
+            item.style.background='red'
+          });
+        });
 
-    const bullets = document.querySelectorAll(".bullets-box span");
-    bullets.forEach((item)=>{
-      item.addEventListener('click',clickBullets);
-      
-    })
-
-
-
-  
-   
-
-
-
-    
-
+        function changeSlider() {
+          maxImg[curIdx].style.opacity ='0';
+           curIdx++
+           if(curIdx === maxImg.length)
+            curIdx = 0;
+            bullets.forEach((item,idx)=>{
+              item.style.background = '#807d7dcc'
+            })
+            // corrigir Alteração de point 
+            // bullets[curIdx].style.background= 'red';
+           maxImg[curIdx].style.opacity ='1';
+        };
 }
+
 
 
  
