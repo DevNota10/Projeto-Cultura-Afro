@@ -71,22 +71,23 @@ window.onload = function(){
     const bullets = document.querySelectorAll(".bullets-box > span");
     const maxImg = document.querySelectorAll(".img-box img");
     let curIdx = 0;
-    let delay = 3000;
+
+    let delay = 6000;
 
    
-     function initSlider(bullets){
-      for(let i = 0; i <maxImg.length; i++ ){
-        if(i == 0){
+     function initSlider(){
+      // for( i = 0; i < maxImg.length; i++ ){
+      //   if(i == 0){
        
-        let span =  document.createElement('span');
-         bulletsBox.appendChild(span)
-         span.style.background='red';
+      //   let span =  document.createElement('span');
+      //    bulletsBox.append(span)
+      //    span.style.background='red';
 
-        }else{
-           span =  document.createElement('span');
-          bulletsBox.appendChild(span);
-        }
-      }
+      //   }else{
+      //      span =  document.createElement('span');
+      //     bulletsBox.append(span);
+      //   }
+      // }
 
       maxImg[0].style.opacity='1';
       setInterval(()=>{
@@ -111,18 +112,21 @@ window.onload = function(){
         // Click bullets:
         bullets.forEach((item,index)=>{
           item.addEventListener('click',()=>{
-            maxImg[curIdx].style.opacity='0';
-            curIdx = index;
-            // console.log(curIdx);
-            maxImg[curIdx].style.opacity='1';
-            bullets.forEach((item)=>{
-              item.style.background = '#807d7dcc'
-            })
-            item.style.background='red'
+      
+              maxImg[curIdx].style.opacity='0';
+              curIdx = index;
+              // console.log(curIdx);
+              maxImg[curIdx].style.opacity='1';
+              bullets.forEach((item)=>{
+                item.style.background = '#807d7dcc'
+              })
+              item.style.background='red'
+      
           });
+      
         });
 
-        function changeSlider() {
+        function changeSlider(e) {
           maxImg[curIdx].style.opacity ='0';
            curIdx++
            if(curIdx === maxImg.length)
@@ -131,10 +135,11 @@ window.onload = function(){
               item.style.background = '#807d7dcc'
             })
             // corrigir Alteração de point 
-            // bullets[curIdx].style.background= 'red';
+            bullets[curIdx].style.background= 'red';
            maxImg[curIdx].style.opacity ='1';
         };
 }
+
 
 
 
