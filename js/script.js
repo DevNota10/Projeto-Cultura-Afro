@@ -83,7 +83,6 @@ window.onload = function(){
      
        window.addEventListener('resize',()=>{
         resizeImgSlider()
-        console.log('resize')
       })
 
   

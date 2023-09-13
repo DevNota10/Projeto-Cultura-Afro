@@ -3,7 +3,7 @@ $(window).on('load', function(){
     
     let currIndice = 0;
     let maxIndice = $('.img-box img').length
-    let delay = 3000;
+    let delay = 4000;
     let timer ;
 
     initSlider();
@@ -17,7 +17,7 @@ $(window).on('load', function(){
             }
         }
         $('.img-box img').eq(0).stop().fadeIn();
-        setInterval(function(){
+      timer =  setInterval(function(){
             changeSlider();
         },delay);
 
@@ -32,10 +32,10 @@ $(window).on('load', function(){
          $('.bullets-box span').css('background','#807d7dcc');
          $(this).css('background','#ff0000');
 
-            // clearInterval(timer);  
-            // setInterval(function(){
-            //     changeSlider();
-            // },9000)
+            clearInterval(timer);  
+            setInterval(function(){
+                changeSlider();
+            },9000)
 
         });
      };
