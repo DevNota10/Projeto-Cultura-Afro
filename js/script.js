@@ -66,78 +66,34 @@ window.onload = function(){
        
     })
 
-    // Slider cultura
-    const bulletsBox =  document.querySelector(".bullets-box ");
-    const bullets = document.querySelectorAll(".bullets-box > span");
-    const maxImg = document.querySelectorAll(".img-box img");
-    let curIdx = 0;
-
-    let delay = 6000;
-
-   
-     function initSlider(){
-      // for( i = 0; i < maxImg.length; i++ ){
-      //   if(i == 0){
-       
-      //   let span =  document.createElement('span');
-      //    bulletsBox.append(span)
-      //    span.style.background='red';
-
-      //   }else{
-      //      span =  document.createElement('span');
-      //     bulletsBox.append(span);
-      //   }
-      // }
-
-      maxImg[0].style.opacity='1';
-      setInterval(()=>{
-        changeSlider()
-      },delay);
+    // Conf imgSlider 
+    function   resizeImgSlider () {
+        const img = document.querySelector(".img-box img")
+        const containerSlider = document.querySelector(".container-slider")
+        let heightImg = img.clientHeight;
+         
+         if((window.innerWidth - 100 ) < heightImg){
+            containerSlider.style.height = heightImg+'px'
+         }else{
+          return false
+          
+         }
+       }
+       resizeImgSlider()
      
-     };
-     initSlider();
+       window.addEventListener('resize',()=>{
+        resizeImgSlider()
+        console.log('resize')
+      })
 
-     function changeSlider() {
-      maxImg[curIdx].style.opacity ='0';
-       curIdx++
-       if(curIdx == maxImg.length)
-        curIdx = 0;
-        bullets.forEach((item,idx)=>{
-          item.style.background = '#807d7dcc'
-        })
-        bullets[curIdx].style.background= 'red'
-       maxImg[curIdx].style.opacity ='1';
-    };
+  
 
-        // Click bullets:
-        bullets.forEach((item,index)=>{
-          item.addEventListener('click',()=>{
-      
-              maxImg[curIdx].style.opacity='0';
-              curIdx = index;
-              // console.log(curIdx);
-              maxImg[curIdx].style.opacity='1';
-              bullets.forEach((item)=>{
-                item.style.background = '#807d7dcc'
-              })
-              item.style.background='red'
-      
-          });
-      
-        });
 
-        function changeSlider(e) {
-          maxImg[curIdx].style.opacity ='0';
-           curIdx++
-           if(curIdx === maxImg.length)
-            curIdx = 0;
-            bullets.forEach((item,idx)=>{
-              item.style.background = '#807d7dcc'
-            })
-            // corrigir Alteração de point 
-            bullets[curIdx].style.background= 'red';
-           maxImg[curIdx].style.opacity ='1';
-        };
+
+
+    
+
+    
 }
 
 
