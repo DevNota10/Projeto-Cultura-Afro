@@ -3,15 +3,15 @@ window.onload = function(){
 
 
   // CONFIGURAR ALTERAÇÃO DE BCK BODY :
-  const body = document.querySelector("body");
-  setInterval(function(){
-    changeBackgorundBody()
-  },10000)
+  // const body = document.querySelector("body");
+  // setInterval(function(){
+  //   changeBackgorundBody()
+  // },4000)
 
-  function changeBackgorundBody(){
+  // function changeBackgorundBody(){
 
-    body.classList.toggle('changeBackgorundBody')
-  }
+  //   body.classList.toggle('changeBackgorundBody')
+  // }
 
     // ScrollToSection:
     const links = document.querySelectorAll("#menu a[href^='#']");
