@@ -2,6 +2,17 @@
 window.onload = function(){
 
 
+  // CONFIGURAR ALTERAÇÃO DE BCK BODY :
+  const body = document.querySelector("body");
+  setInterval(function(){
+    changeBackgorundBody()
+  },10000)
+
+  function changeBackgorundBody(){
+
+    body.classList.toggle('changeBackgorundBody')
+  }
+
     // ScrollToSection:
     const links = document.querySelectorAll("#menu a[href^='#']");
     getDistanceFromTheTop =(element)=>{
@@ -84,6 +95,8 @@ window.onload = function(){
        window.addEventListener('resize',()=>{
         resizeImgSlider()
       })
+
+      
 
   
 
