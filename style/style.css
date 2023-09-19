@@ -10,19 +10,9 @@ body{
     background-size:400px 400px ;
     background-position: center;
     position: relative;
-    /* background-image: url(../img/martin-luther-king-jr-2028448.svg); */
-
-    background-image: url(../img/martin-luther-king-155551.svg);
-    transition-duration: 5s;
+    background-image: url(../img/martin-luther-king-jr-2028448.svg);
+    transition-duration: 0.5s;
 }
-
-/* body.changeBackgorundBody{
-    background-image: url(../img/martin-luther-king-155551.svg);
-    transition-duration: 1s;
-    visibility: hidden;
-
-} */
-
 
 /* framework  */
 .container{
@@ -128,7 +118,6 @@ section.main{
     width: 100%;
     overflow: hidden;
     position: relative;
-    background: yellow;
 }
 
 section.main .container {
@@ -174,8 +163,7 @@ section.main .ball h1{
     50%{
         border-color: #fff;
         transform: rotate(0deg);
-    }
-    
+    }  
 }
 
 section.main .text-01-main{
@@ -187,15 +175,11 @@ section.main .text-01-main{
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.3;
     transition: 1s;
-}
-section.main .text-01-main:hover{
-    opacity: 1;
 }
 
 section.main .text-01-main p{
-    text-shadow: 2px 2px 2px solid yellow;
+    text-shadow: 2px 2px 2px solid #f4f40c;
     color:  #fff;
 }
 .box-sidebar-sticky{
@@ -214,22 +198,21 @@ section.main .text-01-main p{
     position: relative;
     top: 30%;
     padding: 10px;
-    left: -80%;
+    left: 0px;
    transition: 1s;
-  
 }
 .open-sidebar{
-    left: 0px;
+    left: -80%;  
 }
 
 .arrow-right{
     font-size: 60px;
     color: #ffffff7e;
     right: -40px;
-    transition: 1s;
+    transition: 0.5s;
 } 
  .arrow-left{
-    transform: rotate(180deg);
+    transform: rotateY(-180deg);
 }
 
  .arrow-sidebar{
@@ -322,12 +305,12 @@ section.cultura span{
 footer{
     width: 100%;
     height: 300px;
-    /* background:#573327 ; */
+    background:#170105 ;
 }
 
 footer .container{
     color: #fff;
-    background-color: #170105;
+    /* background-color: #170105; */
 }
 @media screen and (max-width:768px) {
     header .logo{
